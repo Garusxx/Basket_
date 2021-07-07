@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BasketController">
+   <children>
+      <TableView fx:id="itemBasketTable" layoutX="14.0" layoutY="14.0" prefHeight="288.0" prefWidth="354.0">
+          <columns>
+              <TableColumn prefWidth="75" text="Name">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="name" />
+                  </cellValueFactory>
+              </TableColumn>
+          </columns>
+          <columns>
+              <TableColumn prefWidth="75" text="Price">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="price" />
+                  </cellValueFactory>
+              </TableColumn>
+          </columns>
+          <columns>
+              <TableColumn prefWidth="75" text="Quantiti">
+                  <cellValueFactory>
+                      <PropertyValueFactory property="quantiti" />
+                  </cellValueFactory>
+              </TableColumn>
+          </columns>
+      </TableView>
+      <Button layoutX="397.0" layoutY="135.0" mnemonicParsing="false" onAction="#removeItemBasket" text="Remove " />
+      <Button layoutX="409.0" layoutY="98.0" mnemonicParsing="false" onAction="#addItemBasket" text="Add" />
+      <Button layoutX="32.0" layoutY="468.0" mnemonicParsing="false" onAction="#showMenu" text="Go back" />
+      <TextField fx:id="quantitiField" layoutX="389.0" layoutY="65.0" prefHeight="25.0" prefWidth="92.0" />
+      <Label layoutX="392.0" layoutY="48.0" text="Quantiti" />
+      <TextArea fx:id="basketArea" layoutX="537.0" layoutY="16.0" prefHeight="282.0" prefWidth="296.0" />
+   </children>
+</AnchorPane>
